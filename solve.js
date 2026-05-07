@@ -203,3 +203,6 @@ function abc(name){
 }
 const value = abc("yuvraj");
 console.log(value); // it will print { name: 'yuvraj' } because the abc function creates an object with a property name that is assigned the value of the name parameter passed to the function. When we call abc("yuvraj"), it creates an object { name: "yuvraj" } and returns it. Therefore, when we log value, it prints { name: 'yuvraj' }.
+
+
+
