@@ -14,4 +14,3 @@ function isSorted(arr) {
 console.log(isSorted([1,2,3,4,5]));
 console.log(isSorted([1,3,2,4,5]));
 
-console.log(isSorted([1,2,3,4,5])); // it will print true because the array is sorted in ascending order.
