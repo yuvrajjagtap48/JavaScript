@@ -17,3 +17,5 @@ execute(greet);
 // | filter()     | filter data        |
 // | reduce()     | accumulate         |
 // | setTimeout() | callback execution |
+
+
