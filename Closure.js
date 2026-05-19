@@ -13,8 +13,3 @@
 // counter(); 
 // counter(); 
 
-console.log(Math.max()); // -Infinity
-console.log(!!undefined); // false
-console.log(!!!undefined); // true
-console.log(!!null); // false
-console.log(!!!null); // true

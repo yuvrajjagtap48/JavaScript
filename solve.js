@@ -129,3 +129,10 @@
 // const arr = [1, 2, 3];
 // const list = arr.map((x,i) => <p key={1}>{x}</p> );
 // console.log(list.length);
+
+
+console.log(Math.max()); // -Infinity
+console.log(!!undefined); // false
+console.log(!!!undefined); // true
+console.log(!!null); // false
+console.log(!!!null); // true
