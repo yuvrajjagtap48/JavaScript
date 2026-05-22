@@ -153,4 +153,54 @@
 // console.log(x === y); // false
 // console.log(z === y); // true
 
+// console.log(NaN === NaN);
 
+
+// const obj = {
+//     pqr : 1,
+//     abc : 2,
+//     xyz : {
+//         pqr : 3,
+//         abc : 4
+//     }
+// }
+// const {pqr, abc, xyz:{pqr:p}} = obj;
+// console.log(pqr, abc,p);  // it will print 1 2 3 because we are using object destructuring to extract the values of pqr, abc, and p from the obj object. The variable pqr is assigned the value of obj.pqr, which is 1. The variable abc is assigned the value of obj.abc, which is 2. The variable p is assigned the value of obj.xyz.pqr, which is 3. Therefore, when we log pqr, abc, and p, it prints 1 2 3.
+
+
+// let arr = [1, 2, 3, 4];
+// const filterArr = arr.map((e) => e > 3);
+// console.log(filterArr); // it will print [ false, false, false, true ] because the map() method creates a new array by applying the provided function to each element of the original array. In this case, the function checks if each element e is greater than 3. For the elements 1, 2, and 3, the condition is false, so they are mapped to false. For the element 4, the condition is true, so it is mapped to true. Therefore, the resulting array is [ false, false, false, true ].
+
+// console.log(typeof abcd);
+// console.log(abc); // it give error because abcd is not defined, and abc is also not defined. When we try to access a variable that has not been declared or assigned a value, it results in a ReferenceError. Therefore, the first console.log will print "undefined" because typeof returns "undefined" for undeclared variables, but the second console.log will throw a ReferenceError because abc is not defined.
+
+// console.log(typeof abcd);
+// let abcd;  // it give reference error because when we try to access a variable that has not been declared or assigned a value, it results in a ReferenceError. In this case, we are trying to access the variable abcd before it has been declared, which is why it throws a ReferenceError. Therefore, the console.log(typeof abcd) will not be executed, and the error will occur before it can print anything.
+
+// const [a,  , b] = [1, 2, 3];
+// console.log(a, b); // it will print 1 3 because we are using array destructuring to extract the values of a and b from the array [1, 2, 3]. The variable a is assigned the value of the first element of the array, which is 1. The second element (2) is skipped by using an empty slot in the destructuring pattern. The variable b is assigned the value of the third element of the array, which is 3. Therefore, when we log a and b, it prints 1 3.
+
+// const [a,  , b] = [1, 2, 3, 4, 5 , 6];
+// console.log(a, b); // it will print 1 3 because we are using array destructuring to extract the values of a and b from the array [1, 2, 3, 4, 5, 6]. The variable a is assigned the value of the first element of the array, which is 1. The second element (2) is skipped by using an empty slot in the destructuring pattern. The variable b is assigned the value of the third element of the array, which is 3. The remaining elements (4, 5, and 6) are not assigned to any variables and are ignored. Therefore, when we log a and b, it prints 1 3.
+// const {0: c, 2: d} = [1, 2, 3]; // array is objevt thats why we can use object destructuring to extract values from an array. In this case, we are using object destructuring to extract the values at index 0 and index 2 from the array [1, 2, 3]. The variable c is assigned the value of the first element of the array (index 0), which is 1. The variable d is assigned the value of the third element of the array (index 2), which is 3. Therefore, when we log c and d, it prints 1 3.
+// console.log(c, d); // it will print 1 3 because we are using object destructuring to extract the values of c and d from the array [1, 2, 3]. The variable c is assigned the value of the first element of the array (index 0), which is 1. The variable d is assigned the value of the third element of the array (index 2), which is 3. Therefore, when we log c and d, it prints 1 3.
+
+// function abc(){
+//     console.log("hello");
+// }
+// const value = new abc();
+// console.log(value); // it will print "hello" and then the instance of the abc function. When we use the new keyword to create an instance of a function, it executes the function and returns an object. In this case, the abc function logs "hello" to the console, and then the value variable holds the instance of the abc function, which is an object. Therefore, when we log value, it will show the instance of the abc function in the console.
+
+// function abc(name){
+//     this.name = name;
+// }
+// const value = new abc("yuvraj");
+// console.log(value); 
+
+function abc(name){
+    const obj = { name };
+    return obj;
+}
+const value = abc("yuvraj");
+console.log(value); // it will print { name: 'yuvraj' } because the abc function creates an object with a property name that is assigned the value of the name parameter passed to the function. When we call abc("yuvraj"), it creates an object { name: "yuvraj" } and returns it. Therefore, when we log value, it prints { name: 'yuvraj' }.
