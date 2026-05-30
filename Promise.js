@@ -18,6 +18,8 @@ getError().catch((err) => {
 });
 
 
+
+
 // using async/await
 async function fetchData() {
   return "Hello Promise ✅";
