@@ -17,9 +17,6 @@ getError().catch((err) => {
   console.log(err);
 });
 
-
-
-
 // using async/await
 async function fetchData() {
   return "Hello Promise ✅";
