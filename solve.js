@@ -131,8 +131,26 @@
 // console.log(list.length);
 
 
-console.log(Math.max()); // -Infinity
-console.log(!!undefined); // false
-console.log(!!!undefined); // true
-console.log(!!null); // false
-console.log(!!!null); // true
+// console.log(Math.max()); // -Infinity
+// console.log(!!undefined); // false
+// console.log(!!!undefined); // true
+// console.log(!!null); // false
+// console.log(!!!null); // true
+
+
+// let x = 10;
+// if(function f(){}){
+//     x = x + typeof(f);
+// }
+// console.log(x);
+
+// let x = [1, 2, 3];
+// let y = [1, 2, 3];
+// let z = y;
+// console.log(x == y); // false false because when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since x and y are different objects in memory, they are not considered equal, even though they contain the same elements. Therefore, the expression x == y evaluates to false.
+// console.log(z == y); // true true because z and y refer to the same array in memory. When we assign z = y, we are not creating a new array, but rather making z point to the same array that y points to. Therefore, when we compare z and y using the equality operator (==), it checks for reference equality and finds that they refer to the same object in memory, resulting in true being printed.
+// console.log(z == x); // false false because z and x refer to different arrays in memory. Even though they contain the same elements, they are different objects in memory. Therefore, when we compare z and x using the equality operator (==), it checks for reference equality and finds that they refer to different objects in memory, resulting in false being printed.
+// console.log(x === y); // false
+// console.log(z === y); // true
+
+
