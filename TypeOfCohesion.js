@@ -14,6 +14,7 @@ function randomTask() {
   sendEmail();
 }
 
+
 //Logical Cohesion  - Things are grouped because they are logically categorized to do similar things, but they are different by nature.
 function handleInput(type) {
   if(type === "mouse") {}
