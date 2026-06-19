@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise Example</title>
+</head>
+<body>
+
+  <button id="btnThen">Run with THEN</button>
+  <button id="btnAwait">Run with AWAIT</button>
+
+  <script>
+    function buttonPromise() {
+      return new Promise((resolve) => {
+        resolve("Button Clicked ✅");
+      });
+    }
+
+    // Using .then()
+    document.getElementById("btnThen").addEventListener("click", () => {
+      buttonPromise().then((data) => {
+        console.log("THEN callback running:", data);
+      });
+    });
+
+    // Using async/await
+    document.getElementById("btnAwait").addEventListener("click", async () => {
+      const result = await buttonPromise();
+      console.log("AWAIT running:", result);
+    });
+  </script>
+
+</body>
+</html>
