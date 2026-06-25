@@ -12,7 +12,7 @@ let user2 = { ...user1 };
 
 user2.address.city = "Pune";
 
-console.log(user1.address.city);
+console.log(user1.address.city); // Output: "Pune"
 
 
 // Deep Copy      =>    “Everything copied separately.”
@@ -30,7 +30,7 @@ let user4 = structuredClone(user3);
 
 user4.address.city = "Pune";
 
-console.log(user3.address.city);
+console.log(user3.address.city); // Output: "Mumbai"
 
 
 // “A shallow copy copies only the top-level properties, while nested objects are copied by reference.

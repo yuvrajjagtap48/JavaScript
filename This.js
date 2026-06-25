@@ -21,7 +21,7 @@ function x() {
 
 // this keyword value depends on how the function is called(window)
 x();         // defined any reference output => undefined
-window.x();  
+window.x();  // defined reference output => window object
 
 
 
@@ -32,7 +32,7 @@ const obj = {
       console.log(this); 
    }
 };
-obj.x(); //value of obj is obj
+obj.x(); //value of obj is obj output => {a: 10, x: ƒunction()}
 
 
 

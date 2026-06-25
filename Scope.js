@@ -45,4 +45,5 @@ console.log(user.address?.city); // This will return undefined instead of throwi
 var a = 10;
 {
   let a = 20;
-}
+} 
+console.log(a); // output : 10 because the inner variable a is block scoped and it is not accessible outside the block, so the outer variable a is used.  

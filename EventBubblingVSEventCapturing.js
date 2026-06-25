@@ -3,7 +3,7 @@
 </div>
 
 // You click the button 👆
-// Now question is: Which event runs first? => Parent? =>Child?
+// Now question is: Which event runs first? => Parent? => Child?
 
 // That’s where Bubbling and Capturing come.
 

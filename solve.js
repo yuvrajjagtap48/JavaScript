@@ -5,7 +5,7 @@
 
 // var v = a;
 // v.id = 100;
-// console.log(v);
+// console.log(v);  // {id : 100, title: 'meet'} because v is a reference to the same object as a, so when we change the id property of v, it also changes the id property of a.
 
 
 // var a = {
@@ -30,15 +30,14 @@
 //         a : 1
 //     }
 // }
-// console.log(abc());
+// console.log(abc());  // { a: 1 } because the function abc returns an object with a property a that has a value of 1.
 
 
 
 // let arr = [1, 2, 3];
 // arr[5] = 100;
 // console.log(arr);
-// console.log(arr.length);
-// // it will print [ 1, 2, 3, <2 empty items>, 100 ] and 6 because when we assign a value to an index that is greater than the current length of the array, JavaScript creates empty slots for the indices in between. The length of the array is updated to reflect the highest index plus one, which is why it prints 6.
+// console.log(arr.length); // it will print [ 1, 2, 3, <2 empty items>, 100 ] and 6 because when we assign a value to an index that is greater than the current length of the array, JavaScript creates empty slots for the indices in between. The length of the array is updated to reflect the highest index plus one, which is why it prints 6.
 
 
 //console.log(0.1 + 0.2 === 0.3); // it will print false because of the way floating-point numbers are represented in JavaScript. The result of 0.1 + 0.2 is not exactly 0.3 due to precision issues, and therefore the comparison returns false.
@@ -68,8 +67,7 @@
 // function print(b , ...a){
 //     console.log(a);
 // }
-// print(10, 20, 30, 40);
-// it will print [ 20, 30, 40 ] because the rest parameter ...a collects all the remaining arguments passed to the function after the first argument b. In this case, b is assigned the value 10, and the rest of the arguments (20, 30, and 40) are collected into an array and assigned to a. Therefore, when we log a, it prints [ 20, 30, 40 ].
+// print(10, 20, 30, 40); //it will print [ 20, 30, 40 ] because the rest parameter ...a collects all the remaining arguments passed to the function after the first argument b. In this case, b is assigned the value 10, and the rest of the arguments (20, 30, and 40) are collected into an array and assigned to a. 
 
 
 // const obj1 = {};
@@ -81,13 +79,11 @@
 // obj1[obj3] = {
 //     name : "hii"
 // };
-// console.log(obj1[obj2]);
-// it will print { name: 'hii' } because when we use an object as a key in another object, JavaScript converts the key to a string. In this case, both obj2 and obj3 are converted to the same string "[object Object]", which means that they refer to the same key in obj1. Therefore, when we assign a value to obj1[obj2], it overwrites the previous value assigned to that key, resulting in { name: 'hii' } being printed when we access obj1[obj2].
+// console.log(obj1[obj2]); // it will print { name: 'hii' } because when we use an object as a key in another object, JavaScript converts the key to a string. In this case, both obj2 and obj3 are converted to the same string "[object Object]", which means that they refer to the same key in obj1. Therefore, when we assign a value to obj1[obj2], it overwrites the previous value assigned to that key, resulting in { name: 'hii' } being printed when we access obj1[obj2].
 
 
 // console.log([]==[]);  //it will memory address of both arrays is different, so it will print false because in JavaScript, when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since both arrays are different objects in memory, they are not considered equal, even if they contain the same elements. Therefore, the expression [] == [] evaluates to false.
 // console.log([]===[]); // it will also print false for the same reason as above. The strict equality operator (===) also checks for reference equality when comparing objects, including arrays. Since both arrays are different objects in memory, they are not considered equal, and the expression [] === [] evaluates to false.
-
 
 // console.log([] == ![]); // [] => true : it is truthy value 
 // console.log([] == []); // [] => false :  it is truthy value but both are different objects in memory
@@ -97,7 +93,7 @@
 // console.log({} + []);
 // console.log(false == []); // => false == "" => 0 == 0
 // console.log(false == ![]); // => false == false => 0 == 0
-
+// console.log(NaN == NaN);  // NaN => NaN => false 
 
 // console.log("yuvraj" - 100); // output: NaN because we cannot perform subtraction operation on string and number
 // console.log("yuvraj" + 100); // output: "yuvraj100"
@@ -217,9 +213,14 @@
 // const value = abc("yuvraj");
 // console.log(value); // it will print { name: 'yuvraj' } because the abc function creates an object with a property name that is assigned the value of the name parameter passed to the function. When we call abc("yuvraj"), it creates an object { name: "yuvraj" } and returns it. Therefore, when we log value, it prints { name: 'yuvraj' }.
 
-let a = 10;
-function abc(){
-    console.log(a);
-    let a = 20;
-}
-abc(); // it will give reference error because of the temporal dead zone (TDZ) in JavaScript. The variable a is declared using let inside the function abc, which means it is block-scoped and not hoisted to the top of the function. When we try to access a before its declaration, it results in a ReferenceError. Therefore, when we call abc(), it throws a ReferenceError because we are trying to access a before it has been initialized.
+// let a = 10;
+// function abc(){
+//     console.log(a);
+//     let a = 20;
+// }
+// abc(); // it will give reference error because of the temporal dead zone (TDZ) in JavaScript. The variable a is declared using let inside the function abc, which means it is block-scoped and not hoisted to the top of the function. When we try to access a before its declaration, it results in a ReferenceError. Therefore, when we call abc(), it throws a ReferenceError because we are trying to access a before it has been initialized.
+
+
+console.log(a);
+console.log(b);
+var a=b=200;
