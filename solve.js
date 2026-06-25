@@ -82,22 +82,6 @@
 // console.log(obj1[obj2]); // it will print { name: 'hii' } because when we use an object as a key in another object, JavaScript converts the key to a string. In this case, both obj2 and obj3 are converted to the same string "[object Object]", which means that they refer to the same key in obj1. Therefore, when we assign a value to obj1[obj2], it overwrites the previous value assigned to that key, resulting in { name: 'hii' } being printed when we access obj1[obj2].
 
 
-// console.log([]==[]);  //it will memory address of both arrays is different, so it will print false because in JavaScript, when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since both arrays are different objects in memory, they are not considered equal, even if they contain the same elements. Therefore, the expression [] == [] evaluates to false.
-// console.log([]===[]); // it will also print false for the same reason as above. The strict equality operator (===) also checks for reference equality when comparing objects, including arrays. Since both arrays are different objects in memory, they are not considered equal, and the expression [] === [] evaluates to false.
-
-// console.log([] == ![]); // [] => true : it is truthy value 
-// console.log([] == []); // [] => false :  it is truthy value but both are different objects in memory
-
-// console.log({} == {}) // output: false because both are different objects in memory
-// console.log({} === {}) // output: false because both are different objects in memory
-// console.log({} + []);
-// console.log(false == []); // => false == "" => 0 == 0
-// console.log(false == ![]); // => false == false => 0 == 0
-// console.log(NaN == NaN);  // NaN => NaN => false 
-
-// console.log("yuvraj" - 100); // output: NaN because we cannot perform subtraction operation on string and number
-// console.log("yuvraj" + 100); // output: "yuvraj100"
-// console.log("2" > "10") // output: true because when we compare two strings using the greater than operator (>), JavaScript compares them lexicographically (based on their Unicode values). In this case, the first character of "2" has a higher Unicode value than the first character of "1" in "10", so "2" is considered greater than "10", resulting in true being printed.
 
 // if([] == true){
 //     console.log("hello");
@@ -126,43 +110,34 @@
 // it will print 125function because the function declaration inside the if statement is hoisted to the top of the block scope. However, since the function is not assigned to a variable, it does not create a new variable in the scope. Therefore, when we check the type of f using typeof, it returns "function". The expression abc + typeof f concatenates the value of abc (which is 125) with the string "function", resulting in "125function" being printed.
 // 125undefined because the function declaration inside the if statement is hoisted to the top of the block scope, but it does not create a new variable in the scope. Therefore, when we check the type of f using typeof, it returns "undefined". The expression abc + typeof f concatenates the value of abc (which is 125) with the string "undefined", resulting in "125undefined" being printed.
 
-
-//console.log(1 + "2" + 3); // it will print "123" because when we use the + operator with a string and a number, JavaScript converts the number to a string and concatenates them. In this case, 1 is converted to "1", and then "1" is concatenated with "2" to form "12". Finally, "12" is concatenated with 3 (which is converted to "3") to form "123".
-
-//console.log(a == undefined); // it will print true because when we compare a variable that has not been declared or assigned a value to undefined using the equality operator (==), JavaScript treats it as if it were undefined. Since a has not been declared or assigned a value, it is considered undefined, and therefore the expression a == undefined evaluates to true.
-//console.log(a === undefined);// it will print false because the strict equality operator (===) checks for both value and type equality. Since a has not been declared or assigned a value, it is considered undefined, but it is not the same as the primitive value undefined. Therefore, the expression a === undefined evaluates to false.
-
-//console.log([1,2] == [1,2])// it will print false because when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since both arrays are different objects in memory, they are not considered equal, even if they contain the same elements. Therefore, the expression [1,2] == [1,2] evaluates to false.
-
-
-// const arr = [1, 2, 3];
-// const list = arr.map((x,i) => <p key={1}>{x}</p> );
-// console.log(list.length);
-
-
-// console.log(Math.max()); // -Infinity
-// console.log(!!undefined); // false
-// console.log(!!!undefined); // true
-// console.log(!!null); // false
-// console.log(!!!null); // true
-
-
 // let x = 10;
 // if(function f(){}){
 //     x = x + typeof(f);
 // }
-// console.log(x);
+// console.log(x); // 10function
+
+// console.log(typeof abcd);
+// console.log(abc); // it give error because abcd is not defined, and abc is also not defined. When we try to access a variable that has not been declared or assigned a value, it results in a ReferenceError. Therefore, the first console.log will print "undefined" because typeof returns "undefined" for undeclared variables, but the second console.log will throw a ReferenceError because abc is not defined.
+
+// console.log(typeof abcd);
+// let abcd;  // it give reference error because when we try to access a variable that has not been declared or assigned a value, it results in a ReferenceError. In this case, we are trying to access the variable abcd before it has been declared, which is why it throws a ReferenceError. Therefore, the console.log(typeof abcd) will not be executed, and the error will occur before it can print anything.
+
+
+// const arr = [1, 2, 3];
+// const list = arr.map((x,i) => <p key={1}>{x}</p> );
+// console.log(list.length); // it will print 3 because the map() method creates a new array by applying the provided function to each element of the original array. In this case, the function takes two arguments: x (the current element) and i (the index of the current element). The function returns a JSX element <p key={1}>{x}</p> for each element in the array. Since there are three elements in the original array, the resulting list will have a length of 3.
+
+
 
 // let x = [1, 2, 3];
 // let y = [1, 2, 3];
 // let z = y;
-// console.log(x == y); // false false because when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since x and y are different objects in memory, they are not considered equal, even though they contain the same elements. Therefore, the expression x == y evaluates to false.
-// console.log(z == y); // true true because z and y refer to the same array in memory. When we assign z = y, we are not creating a new array, but rather making z point to the same array that y points to. Therefore, when we compare z and y using the equality operator (==), it checks for reference equality and finds that they refer to the same object in memory, resulting in true being printed.
-// console.log(z == x); // false false because z and x refer to different arrays in memory. Even though they contain the same elements, they are different objects in memory. Therefore, when we compare z and x using the equality operator (==), it checks for reference equality and finds that they refer to different objects in memory, resulting in false being printed.
+// console.log(x == y); // false => false because when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since x and y are different objects in memory, they are not considered equal, even though they contain the same elements. Therefore, the expression x == y evaluates to false.
+// console.log(z == y); // true => true because z and y refer to the same array in memory. When we assign z = y, we are not creating a new array, but rather making z point to the same array that y points to. Therefore, when we compare z and y using the equality operator (==), it checks for reference equality and finds that they refer to the same object in memory, resulting in true being printed.
+// console.log(z == x); // false => false because z and x refer to different arrays in memory. Even though they contain the same elements, they are different objects in memory. Therefore, when we compare z and x using the equality operator (==), it checks for reference equality and finds that they refer to different objects in memory, resulting in false being printed.
 // console.log(x === y); // false
 // console.log(z === y); // true
 
-// console.log(NaN === NaN);
 
 // const obj = {
 //     pqr : 1,
@@ -180,11 +155,6 @@
 // const filterArr = arr.map((e) => e > 3);
 // console.log(filterArr); // it will print [ false, false, false, true ] because the map() method creates a new array by applying the provided function to each element of the original array. In this case, the function checks if each element e is greater than 3. For the elements 1, 2, and 3, the condition is false, so they are mapped to false. For the element 4, the condition is true, so it is mapped to true. Therefore, the resulting array is [ false, false, false, true ].
 
-// console.log(typeof abcd);
-// console.log(abc); // it give error because abcd is not defined, and abc is also not defined. When we try to access a variable that has not been declared or assigned a value, it results in a ReferenceError. Therefore, the first console.log will print "undefined" because typeof returns "undefined" for undeclared variables, but the second console.log will throw a ReferenceError because abc is not defined.
-
-// console.log(typeof abcd);
-// let abcd;  // it give reference error because when we try to access a variable that has not been declared or assigned a value, it results in a ReferenceError. In this case, we are trying to access the variable abcd before it has been declared, which is why it throws a ReferenceError. Therefore, the console.log(typeof abcd) will not be executed, and the error will occur before it can print anything.
 
 // const [a,  , b] = [1, 2, 3];
 // console.log(a, b); // it will print 1 3 because we are using array destructuring to extract the values of a and b from the array [1, 2, 3]. The variable a is assigned the value of the first element of the array, which is 1. The second element (2) is skipped by using an empty slot in the destructuring pattern. The variable b is assigned the value of the third element of the array, which is 3. Therefore, when we log a and b, it prints 1 3.
@@ -204,7 +174,7 @@
 //     this.name = name;
 // }
 // const value = new abc("yuvraj");
-// console.log(value); 
+// console.log(value); // it will print abc { name: 'yuvraj' } because when we use the new keyword to create an instance of a function, it creates a new object and sets the this context to that object. In this case, the abc function assigns the name property of the new object to the value of the name parameter passed to the function. Therefore, when we log value, it shows the instance of the abc function with the name property set to "yuvraj".
 
 // function abc(name){
 //     const obj = { name };
