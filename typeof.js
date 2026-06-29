@@ -13,13 +13,11 @@ console.log(typeof(Symbol("sym"))); // "symbol"
 
 // console.log([]==[]);  //it will memory address of both arrays is different, so it will print false because in JavaScript, when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since both arrays are different objects in memory, they are not considered equal, even if they contain the same elements. Therefore, the expression [] == [] evaluates to false.
 // console.log([]===[]); // it will also print false for the same reason as above. The strict equality operator (===) also checks for reference equality when comparing objects, including arrays. Since both arrays are different objects in memory, they are not considered equal, and the expression [] === [] evaluates to false.
-
 // console.log([] == ![]); // [] => true : it is truthy value 
-// console.log([] == []); // [] => false :  it is truthy value but both are different objects in memory
-
 // console.log({} == {}) // output: false because both are different objects in memory
 // console.log({} === {}) // output: false because both are different objects in memory
-// console.log({} + []);
+
+// console.log({} + []); // 
 // console.log(false == []); // => false == "" => 0 == 0
 // console.log(false == ![]); // => false == false => 0 == 0
 // console.log(NaN == NaN);  // NaN => NaN => false 
@@ -36,7 +34,10 @@ console.log(typeof(Symbol("sym"))); // "symbol"
 //console.log([1,2] == [1,2])// it will print false because when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since both arrays are different objects in memory, they are not considered equal, even if they contain the same elements. Therefore, the expression [1,2] == [1,2] evaluates to false.
 
 // console.log(Math.max()); // -Infinity
+// console.log(Math.min()); // Infinity
+// console.log(!undefined); // true
 // console.log(!!undefined); // false
 // console.log(!!!undefined); // true
+// console.log(!null); // true
 // console.log(!!null); // false
 // console.log(!!!null); // true
