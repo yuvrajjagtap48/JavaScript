@@ -14,3 +14,10 @@ const users = [
 
 const fullNames = users.map(x => x.firstName + " " + x.lastName);
 console.log(fullNames);
+
+
+// using normal function
+const fullNames2 = users.map(function(x) {
+    return x.firstName + " " + x.lastName;
+});
+console.log(fullNames2);

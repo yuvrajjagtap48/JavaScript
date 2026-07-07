@@ -1,4 +1,3 @@
-
 // The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 // const nums  = [1, 2, 3, 4, 5];
 // const result = nums.filter((num) => num > 3);
@@ -27,3 +26,4 @@ const users = [
 
 const output = users.filter((x) => x.age <= 30).map((x) => x.firstName);
 console.log(output);
+

@@ -18,18 +18,21 @@ var x = 10;
 
 
 // Function hoisting
-// Function Declaration
 hello();
-
 function hello() {
    console.log("Hi");
 }
 // Works perfectly. Because full function is hoisted.
 
-// Function Expression
+
+// Arrow Function/Function Expression
 hello();
 
-var hello = function() {
+let hello = function() {
    console.log("Hi");
 }
-// Because only variable declaration is hoisted, not function assignment.
+// Arrow Function not work properly with hoisting
+// Give ReferenceError: Cannot access 'hello' before initialization Because only variable declaration is hoisted, not function assignment.
+
+
+
