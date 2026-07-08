@@ -7,7 +7,7 @@ var x = 10;
 // it only work with var for let and const will throw a ReferenceError
 // “Hoisting is JavaScript’s default behavior of moving declarations to the top during memory creation phase.”
 
-
+// by defalut variable and hoisted 
 
 // Temporally Dead Zone (TDZ)
 // TDZ is the time between variable hoisting and initialization.

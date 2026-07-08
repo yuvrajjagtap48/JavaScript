@@ -138,6 +138,15 @@
 // console.log(x === y); // false
 // console.log(z === y); // true
 
+// var x = 0;
+// var y = "0";
+// var z = false;
+// console.log(x == y); // true => the string "0" is converted to the number 0, and since 0 is equal to 0
+// console.log(x == z); // true => the boolean value false is converted to the number 0, and since 0 is equal to 0
+// console.log(y == z); // false => the string "0" is converted to the number 0, and since 0 is not equal to false
+// console.log(x === y); // false => x is a number (0) and y is a string ("0"), so they are not of the same type.
+// console.log(x === z); // false => x is a number (0) and z is a boolean (false), so they are not of the same type. 
+// console.log(y === z); // false => y is a string ("0") and z is a boolean (false), so they are not of the same type. 
 
 // const obj = {
 //     pqr : 1,

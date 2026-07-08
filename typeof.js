@@ -8,6 +8,8 @@ console.log(typeof(true)); // "boolean"
 console.log(typeof(false)); // "boolean"
 console.log(typeof(Symbol("sym"))); // "symbol"
 
+// console.log(null == undefined); // true => This is because both null and undefined represent the absence of a value, and they are treated as equivalent in this context. 
+// console.log(null === undefined); // false => This is because the strict equality operator checks for both value and type equality, and null and undefined are of different types.
 
 // console.log(NaN === NaN); // it will print false because NaN (Not-a-Number) is a special value in JavaScript that represents an undefined or unrepresentable value, such as the result of dividing zero by zero. According to the IEEE 754 standard, which JavaScript follows, NaN is not equal to any value, including itself. Therefore, the expression NaN === NaN evaluates to false.
 
@@ -17,14 +19,29 @@ console.log(typeof(Symbol("sym"))); // "symbol"
 // console.log({} == {}) // output: false because both are different objects in memory
 // console.log({} === {}) // output: false because both are different objects in memory
 
-// console.log({} + []); // 
+// console.log(isNaN("yuvraj")); // true => because "yuvraj" is not a number, so it will return true
+// console.log(!isNaN("yuvraj")); // false => because "yuvraj" is not a number, so it will return false
+
+// console.log({} + []); // => "[object Object]" because when we use the + operator with an object and an array, JavaScript converts both operands to strings. The object {} is converted to the string "[object Object]", and the empty array [] is converted to the empty string "". When we concatenate these two strings, we get "[object Object]".
+// console.log([] + []); // => "" because when we use the + operator with two empty arrays, JavaScript converts both operands to strings. The empty array [] is converted to the empty string "", and when we concatenate two empty strings, we get an empty string "".
+// console.log({} + {}); // => "[object Object][object Object]" because when we use the + operator with two objects, JavaScript converts both operands to strings. The object {} is converted to the string "[object Object]", and when we concatenate two of these strings, we get "[object Object][object Object]".
 // console.log(false == []); // => false == "" => 0 == 0
 // console.log(false == ![]); // => false == false => 0 == 0
 // console.log(NaN == NaN);  // NaN => NaN => false 
+// console.log(NaN === NaN); // false => NaN is not equal to any value, including itself.
+// console.log(NaN == undefined); // false => NaN is not equal to any value, including undefined.
+// console.log(NaN == null); // false => NaN is not equal to any value, including null.
+// console.log(NaN == 0); // false => NaN is not equal to any value, including 0.
+// console.log(NaN == ""); // false => NaN is not equal to any value, including an empty string.
+// console.log(NaN == false); // false => NaN is not equal to any value, including false.
+// console.log(NaN == true); // false => NaN is not equal to any value, including true.
+// console.log(NaN == []); // false => NaN is not equal to any value, including an empty array.
+
 
 // console.log("yuvraj" - 100); // output: NaN because we cannot perform subtraction operation on string and number
 // console.log("yuvraj" + 100); // output: "yuvraj100"
 // console.log("2" > "10") // output: true because when we compare two strings using the greater than operator (>), JavaScript compares them lexicographically (based on their Unicode values). In this case, the first character of "2" has a higher Unicode value than the first character of "1" in "10", so "2" is considered greater than "10", resulting in true being printed.
+// console.log("yuvraj" - "jagtap"); // output: NaN because we cannot perform subtraction operation on two strings
 
 //console.log(1 + "2" + 3); // it will print "123" because when we use the + operator with a string and a number, JavaScript converts the number to a string and concatenates them. In this case, 1 is converted to "1", and then "1" is concatenated with "2" to form "12". Finally, "12" is concatenated with 3 (which is converted to "3") to form "123".
 
@@ -33,6 +50,7 @@ console.log(typeof(Symbol("sym"))); // "symbol"
 
 //console.log([1,2] == [1,2])// it will print false because when we compare two arrays using the equality operator (==), it checks for reference equality rather than value equality. Since both arrays are different objects in memory, they are not considered equal, even if they contain the same elements. Therefore, the expression [1,2] == [1,2] evaluates to false.
 
+    
 // console.log(Math.max()); // -Infinity
 // console.log(Math.min()); // Infinity
 // console.log(!undefined); // true

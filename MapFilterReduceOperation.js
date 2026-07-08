@@ -1,12 +1,12 @@
 // Method	    |               Purpose	                   |         Returns
-// find()	    |   First matching object	               |  Object or undefined
-// filter()	    |   All matching objects	               |  New array
-// map()	    |   Transform/update each object	       |  New array
-// reduce()	    |   Convert array into a single value      |  Any value
-// sort()	    |   Sort elements	                       |  Modified array (in place)
+// find()	    |   First matching object	                 |  Object or undefined
+// filter()	  |   All matching objects	                 |  New array
+// map()	    |   Transform/update each object	         |  New array
+// reduce()	  |   Convert array into a single value      |  Any value
+// sort()	    |   Sort elements	                         |  Modified array (in place)
 // some()	    |   Check if at least one element matches  |  true/false
-// every()	    |   Check if all elements match	           |  true/false
-// forEach()    |   Perform an action for each element	   |  undefined (no new array)
+// every()	  |   Check if all elements match	           |  true/false
+// forEach()  |   Perform an action for each element	   |  undefined (no new array)
 
 
 const users = [

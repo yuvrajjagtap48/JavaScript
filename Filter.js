@@ -1,3 +1,14 @@
+// | Feature         | map()          | filter()        | reduce()            |
+// | --------------- | -------------- | --------------- | ------------------- |
+// | Returns         | New Array      | New Array       | Any value           |
+// | Array Size      | Same           | Same or Smaller | One value           |
+// | Purpose         | Transform      | Filter          | Combine             |
+// | Original Array  | Doesn't change | Doesn't change  | Doesn't change      |
+// | Callback Return | New value      | true/false      | Updated accumulator |
+
+
+
+
 // The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 // const nums  = [1, 2, 3, 4, 5];
 // const result = nums.filter((num) => num > 3);

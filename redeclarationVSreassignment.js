@@ -13,3 +13,7 @@ let name = "Yuvraj";
 name = "Raj";
 console.log(name);
 
+
+// undefined : A variable that has been declared but has not been assigned a value.
+
+// undeclared  : A variable that has not been declared using var, let, or const.

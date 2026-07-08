@@ -43,3 +43,26 @@ const user = {
 const {name, city} = user;
 console.log(name);
 console.log(city);
+
+
+// Print Array
+const number = [1, 2, 3, 4, 5];
+function printArray(arr){
+   for(let i = 0; i < arr.length; i++){
+      console.log(arr[i]);
+   }
+}
+printArray(number);
+
+// array inside object
+const users = [
+   {name : "Yuvraj", city: "Pune"},
+   {name : "omkar", city : "pune"},
+   {name : "Amit", city : "pune"}
+];
+function printUsers(users){
+   for(let i = 0; i < users.length; i++){
+      const {name, city} = users[i];
+      console.log(name, city);
+   }
+}

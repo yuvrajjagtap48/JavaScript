@@ -1,5 +1,14 @@
-
 // Function declaration =>  A function defined using the function keyword.
+function greet() {
+   return "Hello!";
+}
+
+// Anonymous function =>  A function without a name, often used as an argument to other functions or assigned to a variable.
+const greet = function() {
+   return "Hello!";
+};
+
+// Named function =>  A function with a name, which can be used for recursion or debugging.
 function greet() {
    return "Hello!";
 }
