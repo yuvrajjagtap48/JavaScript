@@ -21,5 +21,6 @@ counter();
 // It only works with let and const, not var. Because var is function scoped, 
 // it does not create a new scope for each iteration of a loop, which can lead to unexpected behavior when used in closures.
 
+// parent scope have access to child scope but child scope does not have access to parent scope.
 
 

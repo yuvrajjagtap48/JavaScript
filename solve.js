@@ -30,9 +30,15 @@
 //         a : 1
 //     }
 // }
-// console.log(abc());  // { a: 1 } because the function abc returns an object with a property a that has a value of 1.
+// console.log(abc());  // it will print { a: 1 } because the function abc returns an object with a property a set to 1. When we call abc(), it returns the object, and console.log prints it to the console.
 
-
+// function abc(){
+//     return
+//     {
+//         b : 1;
+//     }
+// }
+// console.log(abc()); // output: undefined => Because the return statement is followed by a newline, so the JavaScript engine automatically inserts a semicolon after the return statement, which means that the function returns undefined instead of the object {b: 1}.
 
 // let arr = [1, 2, 3];
 // arr[5] = 100;
@@ -200,6 +206,19 @@
 // abc(); // it will give reference error because of the temporal dead zone (TDZ) in JavaScript. The variable a is declared using let inside the function abc, which means it is block-scoped and not hoisted to the top of the function. When we try to access a before its declaration, it results in a ReferenceError. Therefore, when we call abc(), it throws a ReferenceError because we are trying to access a before it has been initialized.
 
 
-console.log(a);
-console.log(b);
-var a=b=200;  
+// console.log(a);
+// console.log(b);
+// var a=b=200;  
+
+// const obj = { test : "yuvraj" };
+// const obj2 = obj;
+// obj2.test = "jagtap"
+// console.log(obj, obj2); // it will print { test: 'jagtap' } { test: 'jagtap' } because obj and obj2 are both references to the same object in memory. When we change the test property of obj2, it also changes the test property of obj since they point to the same object. Therefore, when we log obj and obj2, they both show the updated value of the test property as "jagtap".
+
+
+let a = {
+    name : "A"
+}
+let b = a;
+b.name = "B";
+console.log(a.name); // it will print "B" because a and b are both references to the same object in memory. When we change the name property of b, it also changes the name property of a since they point to the same object. Therefore, when we log a.name, it shows the updated value of the name property as "B".

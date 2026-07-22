@@ -71,3 +71,9 @@ function proceedToPayment(orderId) {
     });
   return pr;
 }
+
+// .then => it is used to handle the resolved value of a promise. It takes a callback function as an argument, which will be executed when the promise is resolved successfully. The resolved value of the promise will be passed as an argument to the callback function.
+
+// .catch => it is used to handle the rejected value of a promise. It takes a callback function as an argument, which will be executed when the promise is rejected. The rejected value of the promise will be passed as an argument to the callback function.
+
+// finally => it will run in both cases (resolve and reject) and it will not receive any value from the previous promise. It is used to perform some cleanup or final actions after the promise is settled, regardless of whether it was fulfilled or rejected.

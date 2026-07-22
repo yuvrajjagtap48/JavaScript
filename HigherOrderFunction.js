@@ -1,4 +1,5 @@
 // Higher-Order Functions => A function that takes another function as an argument or returns a function as a result.
+// it take multiple functions as an argument and return a single function as a result. It is used to create a new function by combining multiple functions together.
 function greet() {
    console.log("Hello");
 }

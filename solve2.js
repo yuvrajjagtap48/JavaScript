@@ -37,11 +37,12 @@
 
 
 // it not accessable because it is in the local scope of function y() and not accessible outside of it. 
-function x(){
-    function y(){
-        let z = 10;
-        console.log("Hello");
-    }
-    console.log(y());
-}
-x();
+// function x(){
+//     function y(){
+//         let z = 10;
+//         console.log("Hello");
+//     }
+//     console.log(y());
+// }
+// x();
+

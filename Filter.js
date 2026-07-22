@@ -27,14 +27,17 @@
 
 
 // find first name the people with age less than 30
-const users = [
-    {firstName: 'John', lastName: 'Doe', age: 30},
-    {firstName: 'Jane', lastName: 'Smith', age: 25},
-    {firstName: 'Emily', lastName: 'Johnson', age: 35},
-    {firstName: 'Michael', lastName: 'Brown', age: 30},
-    {firstName: 'Sarah', lastName: 'Davis', age: 25}
-];
+// const users = [
+//     {firstName: 'John', lastName: 'Doe', age: 30},
+//     {firstName: 'Jane', lastName: 'Smith', age: 25},
+//     {firstName: 'Emily', lastName: 'Johnson', age: 35},
+//     {firstName: 'Michael', lastName: 'Brown', age: 30},
+//     {firstName: 'Sarah', lastName: 'Davis', age: 25}
+// ];
 
-const output = users.filter((x) => x.age <= 30).map((x) => x.firstName);
-console.log(output);
+// const output = users.filter((x) => x.age <= 30).map((x) => x.firstName);
+// console.log(output);
 
+const nums  = [1, 2, 3, 4, 5];
+const result = nums.map((num) => num > 3);
+console.log(result);
