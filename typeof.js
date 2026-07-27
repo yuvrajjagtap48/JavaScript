@@ -7,6 +7,7 @@ console.log(typeof(function(){})); // "function"
 console.log(typeof(true)); // "boolean"
 console.log(typeof(false)); // "boolean"
 console.log(typeof(Symbol("sym"))); // "symbol"
+console.log(typeof(object));  // "object"
 
 // console.log(null == undefined); // true => This is because both null and undefined represent the absence of a value, and they are treated as equivalent in this context. 
 // console.log(null === undefined); // false => This is because the strict equality operator checks for both value and type equality, and null and undefined are of different types.
